@@ -1,8 +1,11 @@
+.header {
+    position: absolute;
+    width: 100%;
+}
+
 .header__container {
     margin-top: 60px;
-    @include flex(space-between);
-    background-color: darksalmon;
-
+    @include flex(space-between, center);
 }
 
 .logo__h {

@@ -1,0 +1,16 @@
+.button {
+    @extend %font-title;
+    padding: 15px 45px;
+    border-radius: 100px;
+    border: none;
+
+    &_dark {
+        background:  rgb(238, 187, 151);
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+            background: $additional-color
+        }
+    }
+}
