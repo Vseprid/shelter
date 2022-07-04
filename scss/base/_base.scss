@@ -2,6 +2,15 @@
     box-sizing: border-box;
 }
 
+section {
+    padding-top: 80px;
+    padding-bottom: 100px
+}
+
+.grey-section {
+    background-color: #F6F6F6;
+}
+
 .container {
     max-width: 1200px;
     width: 93.75%;
@@ -13,4 +22,5 @@ html {
     font-weight: 400;
     line-height: $line-height;
     font-size: 15px;
+    color: $main-color;
 }

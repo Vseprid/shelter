@@ -1,0 +1,15 @@
+.about__container {
+    @include flex();
+    max-width: 830px;
+    gap: 14.12%;
+}
+.about__text {
+    @include flex();
+    flex-direction: column;
+    margin-top: 14px;
+    gap: 25px;
+}
+
+.about__title {
+    max-width: 370px;
+}

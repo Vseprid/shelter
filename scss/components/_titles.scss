@@ -1,5 +1,5 @@
-// h2 {
-//     font-family: 'Georgia';
-// font-style: normal;
-// font-weight: 400;
-// }
+.title {
+    @extend %font-title;
+    font-size: $title-font;
+    letter-spacing: 0.06em;
+}
