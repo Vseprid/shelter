@@ -1,0 +1,24 @@
+.help__title {
+    max-width: 308px;
+    text-align: center;
+    margin: 0 auto 60px;
+}
+
+.help-icons {
+    margin: 0 auto;
+    @include flex(center);
+    flex-wrap: wrap;
+    column-gap: 11%;
+    row-gap: 55px;
+    max-width: 90%
+}
+
+.help-icon {
+    @include flex(flex-start, center);
+    flex-direction: column;
+}
+
+.help__subtitle {
+    @extend %font-title;
+    font-size: 20px;
+}

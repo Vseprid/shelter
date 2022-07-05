@@ -1,4 +1,4 @@
-.card__title, .title, .button, .not-only__title {
+.help__subtitle, .card__title, .title, .button, .not-only__title {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -614,6 +614,36 @@ html {
 }
 
 .card__title {
+  font-size: 20px;
+}
+
+.help__title {
+  max-width: 308px;
+  text-align: center;
+  margin: 0 auto 60px;
+}
+
+.help-icons {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 11%;
+  row-gap: 55px;
+  max-width: 90%;
+}
+
+.help-icon {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
+}
+
+.help__subtitle {
   font-size: 20px;
 }
 
