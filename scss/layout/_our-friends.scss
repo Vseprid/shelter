@@ -1,0 +1,10 @@
+.our-friends__container {
+    @include flex(flex-start, center);
+    flex-direction: column;
+    gap: 60px;
+}
+
+.our-friend__title {
+    max-width: 400px;
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+.cards {
+    @include flex();
+    width: 100%;
+}
+
+.card {
+    @include flex(flex-start, center);
+    gap: 30px;
+    flex-direction: column;
+    padding-bottom: 30px;
+    background-color: #FAFAFA;
+    cursor: pointer;
+
+    &:hover .button {
+        background: $additional-color
+    }
+}
+
+.card__title {
+    @extend %font-title;
+    font-size: 20px;
+}
