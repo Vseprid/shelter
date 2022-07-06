@@ -1,4 +1,4 @@
-.help__subtitle, .card__title, .title, .button, .not-only__title {
+.help__subtitle, .card__title, .subtitle, .title, .button, .not-only__title {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -539,6 +539,12 @@ html {
   letter-spacing: 0.06em;
 }
 
+.subtitle {
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  font-size: 15px;
+}
+
 .our-friends__container {
   display: flex;
   justify-content: flex-start;
@@ -645,6 +651,44 @@ html {
 
 .help__subtitle {
   font-size: 20px;
+}
+
+.in-addition__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.in-addition__text {
+  max-width: 380px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.in-addition__button {
+  position: relative;
+  padding: 10px 15px 10px 60px;
+  font-size: 20px;
+  border-radius: 9px;
+}
+.in-addition__button::before {
+  content: url(/assets/icons/credit-card.svg);
+  position: absolute;
+  left: 15px;
+  top: 12px;
+}
+
+.in-addition__par {
+  color: #B2B2B2;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 150%;
 }
 
 /*# sourceMappingURL=style.css.map */

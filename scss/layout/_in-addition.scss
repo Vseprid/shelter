@@ -1,0 +1,32 @@
+.in-addition__container {
+    @include flex(center);
+    gap: 30px;
+}
+
+.in-addition__text {
+    max-width: 380px;
+    @include flex();
+    flex-direction: column;
+    gap: 20px;
+}
+
+.in-addition__button {
+    position: relative;
+    padding: 10px 15px 10px 60px;
+    font-size: 20px;
+    border-radius: 9px;
+
+    &::before {
+        content: url(/assets/icons/credit-card.svg);
+        position: absolute;
+        left: 15px;
+        top: 12px;
+    }
+}
+
+.in-addition__par {
+    color: #B2B2B2;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 150%;
+}
