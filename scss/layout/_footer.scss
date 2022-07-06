@@ -1,0 +1,31 @@
+.footer {
+    background: $background;
+}
+
+.footer__container {
+    padding-top: 40px;
+    @include flex();
+    height: 100%;
+}
+
+.contact-blocks {
+    max-width: 302px;
+    @include flex();
+    flex-direction: column;
+    min-height: 234px;
+
+}
+
+.footer__title {
+    color: $light-color;
+}
+
+.contact {
+    position: relative;
+    @include flex(flex-start, center);
+    gap: 20px;
+    @extend %font-title;
+    color: $additional-color;
+    font-size: 20px;
+    line-height: 115%;
+}
