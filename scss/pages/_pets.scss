@@ -1,0 +1,16 @@
+*, .logo__h, .logo__sub, .nav__a {
+    color: $main-color;
+}
+
+.header {
+    position: static;
+}
+
+.nav__a_focus {
+    color: $black-color;
+}
+
+.cards {
+    flex-wrap: wrap;
+    row-gap: 30px;
+}

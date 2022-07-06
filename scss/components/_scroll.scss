@@ -6,16 +6,7 @@
 
 .scroll__arrow {
     @include flex(center, center);
-    height: 52px;
-    min-width: 52px;
-    border: 2px solid $additional-color;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: .3s;
-
-    &:hover:not(&_inactive) {
-        background-color: $additional-color;
-    }
+    @extend %scroll-buttons;
 
     &_inactive {
         border-color: $dark-h-color;

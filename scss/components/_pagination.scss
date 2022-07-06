@@ -1,0 +1,20 @@
+.pag {
+    @include flex(center);
+    gap: 20px;
+
+    & > * {
+        @include flex(center, center);
+        @extend %scroll-buttons;
+
+    }
+}
+
+.pag__number {
+    background-color: #F1CDB3;;
+}
+
+.pag__arrow_inactive {
+    border-color: $dark-h-color;
+    cursor: inherit;
+    color: $dark-h-color;
+}

@@ -10,6 +10,11 @@
     padding-bottom: 30px;
     background-color: #FAFAFA;
     cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
     &:hover .button {
         background: $additional-color
