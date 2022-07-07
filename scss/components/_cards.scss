@@ -1,6 +1,10 @@
 .cards {
     @include flex();
     width: 100%;
+
+    @media screen and (max-width: $table) {
+        justify-content: space-between;
+      }
 }
 
 .card {
@@ -18,6 +22,12 @@
 
     &:hover .button {
         background: $additional-color
+    }
+
+    &:last-of-type {
+        @media screen and (max-width: $table) {
+            display: none;
+          }
     }
 }
 

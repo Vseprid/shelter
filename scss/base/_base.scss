@@ -15,6 +15,10 @@ section {
     max-width: 1200px;
     width: 93.75%;
     margin: $margin-center;
+
+    @media screen and (max-width: $table) {
+        width: 92%;
+      }
 }
 
 html {

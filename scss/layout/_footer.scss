@@ -5,7 +5,13 @@
 .footer__container {
     padding-top: 40px;
     @include flex();
-    height: 100%;
+    flex-wrap: wrap;
+    row-gap: 65px;
+
+    @media screen and (max-width: 984px) {
+        justify-content: center;
+        column-gap:65px;
+      }
 }
 
 .contact-blocks {

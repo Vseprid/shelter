@@ -1,5 +1,5 @@
-.contact, .help__subtitle, .card__title, .subtitle, .title, .button, .not-only__title, .scroll__arrow {
-  font-family: "Georgia";
+.contact, .help__subtitle, .card__title, .subtitle, .title, .button, .not-only__title, .logo__h, .scroll__arrow {
+  font-family: "Georgia", "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
@@ -388,6 +388,11 @@ section {
   width: 93.75%;
   margin: 0 auto;
 }
+@media screen and (max-width: 1090px) {
+  .container {
+    width: 92%;
+  }
+}
 
 html {
   font-family: Arial, Helvetica, sans-serif;
@@ -421,15 +426,18 @@ html {
   flex-direction: row;
   align-items: center;
 }
+@media screen and (max-width: 1090px) {
+  .header__container {
+    margin-top: 30px;
+  }
+}
 
 .logo__h {
   margin-bottom: 8px;
   color: #f1cdb3;
-  font-family: "Georgia", "Times New Roman", Times, serif;
-  font-style: normal;
-  font-weight: 400;
   line-height: 35px;
   letter-spacing: 0.1em;
+  font-size: 32px;
 }
 
 .logo__sub {
@@ -485,6 +493,13 @@ html {
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-start;
+  flex-wrap: wrap;
+  row-gap: 100px;
+}
+@media screen and (max-width: 1234px) {
+  .not-only__container {
+    justify-content: center;
+  }
 }
 
 .not-only__text {
@@ -495,6 +510,11 @@ html {
   align-items: flex-start;
   flex-direction: column;
   gap: 42px;
+}
+@media screen and (max-width: 1000px) {
+  .not-only__text {
+    margin-top: 0px;
+  }
 }
 
 .not-only__title {
@@ -511,6 +531,24 @@ html {
 
 .not-only__button {
   font-size: 20px;
+}
+@media screen and (max-width: 1090px) {
+  .not-only__button {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 1234px) {
+  .not-only__img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .not-only__img {
+    width: 84%;
+    position: relative;
+    left: 10%;
+  }
 }
 
 .button {
@@ -538,7 +576,14 @@ html {
   flex-direction: row;
   align-items: flex-start;
   max-width: 850px;
-  gap: 14.12%;
+  column-gap: 14.12%;
+  row-gap: 80px;
+}
+@media screen and (max-width: 900px) {
+  .about__container {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
 }
 
 .about__text {
@@ -549,6 +594,7 @@ html {
   flex-direction: column;
   margin-top: 14px;
   gap: 25px;
+  max-width: 430px;
 }
 
 .about__title {
@@ -586,7 +632,12 @@ html {
   flex-direction: row;
   align-items: center;
   width: 100%;
-  gap: 53px;
+  gap: 4.42%;
+}
+@media screen and (max-width: 800px) {
+  .scroll {
+    gap: 12px;
+  }
 }
 
 .scroll__arrow {
@@ -615,6 +666,11 @@ html {
   align-items: flex-start;
   width: 100%;
 }
+@media screen and (max-width: 1090px) {
+  .cards {
+    justify-content: space-between;
+  }
+}
 
 .card {
   display: flex;
@@ -633,6 +689,11 @@ html {
 }
 .card:hover .button {
   background: #f1cdb3;
+}
+@media screen and (max-width: 1090px) {
+  .card:last-of-type {
+    display: none;
+  }
 }
 
 .card__title {
@@ -660,6 +721,11 @@ html {
   row-gap: 40px;
   max-width: 90%;
 }
+@media screen and (max-width: 805px) {
+  .help-icons {
+    column-gap: 6%;
+  }
+}
 
 .help-icon {
   display: flex;
@@ -668,6 +734,11 @@ html {
   align-items: center;
   flex-direction: column;
   gap: 5px;
+}
+@media screen and (max-width: 805px) {
+  .help-icon {
+    min-width: 170px;
+  }
 }
 
 .help__subtitle {
@@ -679,7 +750,14 @@ html {
   justify-content: center;
   flex-direction: row;
   align-items: flex-start;
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 60px;
+}
+@media screen and (max-width: 900px) {
+  .in-addition__container {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
 }
 
 .in-addition__text {
@@ -722,7 +800,14 @@ html {
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-start;
-  height: 100%;
+  flex-wrap: wrap;
+  row-gap: 65px;
+}
+@media screen and (max-width: 984px) {
+  .footer__container {
+    justify-content: center;
+    column-gap: 65px;
+  }
 }
 
 .contact-blocks {

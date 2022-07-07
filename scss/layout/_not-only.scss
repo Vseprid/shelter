@@ -6,13 +6,23 @@
 .not-only__container {
     padding-top: 100px;
     @include flex();
+    flex-wrap: wrap;
+    row-gap: 100px;
+
+    @media screen and (max-width: 1234px) {
+        justify-content: center;
+      }
 }
 
 .not-only__text {
     margin-top: 163px;
     @include flex();
     flex-direction: column;
-    gap: 42px
+    gap: 42px;
+
+    @media screen and (max-width: 1000px) {
+        margin-top: 0px;
+      }
 }
 
 .not-only__title {
@@ -30,4 +40,19 @@
 
 .not-only__button {
     font-size: 20px;
+    @media screen and (max-width: $table) {
+        align-self: center;
+      }
+}
+
+.not-only__img {
+    @media screen and (max-width: 1234px) {
+        width: 50%;
+      }
+
+    @media screen and (max-width: 768px) {
+      width: 84%;
+      position: relative;
+      left: 10%;
+    }
 }

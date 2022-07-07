@@ -1,13 +1,20 @@
 .about__container {
     @include flex();
     max-width: 850px;
-    gap: 14.12%;
+    column-gap: 14.12%;
+    row-gap: 80px;
+
+    @media screen and (max-width: 900px) {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+      }
 }
 .about__text {
     @include flex();
     flex-direction: column;
     margin-top: 14px;
     gap: 25px;
+    max-width: 430px;
 }
 
 .about__title {

@@ -1,7 +1,11 @@
 .scroll {
     @include flex(space-between, center);
     width: 100%;
-    gap: 53px
+    gap: 4.42%;
+
+    @media screen and (max-width: 800px) {
+        gap: 12px;
+      }
 }
 
 .scroll__arrow {

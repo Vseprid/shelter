@@ -14,13 +14,21 @@
     flex-wrap: wrap;
     column-gap: 11%;
     row-gap: 40px;
-    max-width: 90%
+    max-width: 90%;
+
+    @media screen and (max-width: 805px) {
+        column-gap: 6%
+      }
 }
 
 .help-icon {
     @include flex(flex-start, center);
     flex-direction: column;
-    gap: 5px
+    gap: 5px;
+
+    @media screen and (max-width: 805px) {
+        min-width: 170px;
+      }
 }
 
 .help__subtitle {
