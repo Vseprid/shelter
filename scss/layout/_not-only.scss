@@ -1,4 +1,5 @@
 .not-only {
+    padding-bottom: 0;
     background: $background;
 }
 
@@ -16,12 +17,17 @@
 
 .not-only__title {
     @extend %font-title;
-    max-width: 310px;
+    max-width: 350px;
     font-size: 44px;
     color: $light-color;
+    letter-spacing: 0.01em;
 }
 
 .not-only__subtitle {
     max-width: 460px;
     color: $dark-h-color;
+}
+
+.not-only__button {
+    font-size: 20px;
 }

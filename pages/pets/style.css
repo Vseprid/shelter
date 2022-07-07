@@ -415,7 +415,7 @@ html {
 }
 
 .header__container {
-  margin: 30px auto;
+  margin: 40px auto;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -423,13 +423,13 @@ html {
 }
 
 .logo__h {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #f1cdb3;
   font-family: "Georgia", "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400;
   line-height: 35px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
 }
 
 .logo__sub {
@@ -605,7 +605,10 @@ html {
 }
 
 .header {
-  position: static;
+  position: sticky;
+  top: -1px;
+  background-color: #FFFFFF;
+  z-index: 10;
 }
 
 .nav__a_focus {

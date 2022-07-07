@@ -4,18 +4,18 @@
 }
 
 .header__container {
-    margin: 30px auto;
+    margin: 60px auto;
     @include flex(space-between, center);
 }
 
 .logo__h {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: $additional-color;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-style: normal;
     font-weight: 400;
     line-height: 35px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.1em;
 }
 
 .logo__sub {

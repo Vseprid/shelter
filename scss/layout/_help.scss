@@ -1,5 +1,9 @@
+.help {
+    padding-bottom: 80px;
+}
+
 .help__title {
-    max-width: 308px;
+    max-width: 318px;
     text-align: center;
     margin: 0 auto 60px;
 }
@@ -9,13 +13,14 @@
     @include flex(center);
     flex-wrap: wrap;
     column-gap: 11%;
-    row-gap: 55px;
+    row-gap: 40px;
     max-width: 90%
 }
 
 .help-icon {
     @include flex(flex-start, center);
     flex-direction: column;
+    gap: 5px
 }
 
 .help__subtitle {

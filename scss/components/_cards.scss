@@ -5,7 +5,7 @@
 
 .card {
     @include flex(flex-start, center);
-    gap: 30px;
+    gap: 8px;
     flex-direction: column;
     padding-bottom: 30px;
     background-color: #FAFAFA;

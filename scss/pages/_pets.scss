@@ -3,7 +3,10 @@
 }
 
 .header {
-    position: static;
+    position: sticky;
+    top: -1px;
+    background-color: $light-color;
+    z-index: 10;
 }
 
 .nav__a_focus {
