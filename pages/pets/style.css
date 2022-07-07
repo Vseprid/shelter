@@ -1,5 +1,5 @@
-.contact, .button, .card__title, .pag > * {
-  font-family: "Georgia";
+.contact, .button, .card__title, .subtitle, .title, .logo__h, .pag > * {
+  font-family: "Georgia", "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
@@ -388,6 +388,11 @@ section {
   width: 93.75%;
   margin: 0 auto;
 }
+@media screen and (max-width: 1090px) {
+  .container {
+    width: 92%;
+  }
+}
 
 html {
   font-family: Arial, Helvetica, sans-serif;
@@ -415,21 +420,24 @@ html {
 }
 
 .header__container {
-  margin: 40px auto;
+  margin: 60px auto;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
 }
+@media screen and (max-width: 1090px) {
+  .header__container {
+    margin-top: 30px;
+  }
+}
 
 .logo__h {
   margin-bottom: 8px;
   color: #f1cdb3;
-  font-family: "Georgia", "Times New Roman", Times, serif;
-  font-style: normal;
-  font-weight: 400;
   line-height: 35px;
   letter-spacing: 0.1em;
+  font-size: 32px;
 }
 
 .logo__sub {
@@ -488,6 +496,17 @@ html {
   text-align: center;
 }
 
+.title {
+  font-size: 35px;
+  letter-spacing: 0.06em;
+}
+
+.subtitle {
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  font-size: 15px;
+}
+
 .cards {
   display: flex;
   justify-content: space-between;
@@ -495,13 +514,24 @@ html {
   align-items: flex-start;
   width: 100%;
 }
+@media screen and (max-width: 1090px) {
+  .cards {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .cards_pets {
+    justify-content: center;
+    gap: 30px 40px;
+  }
+}
 
 .card {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
+  gap: 8px;
   flex-direction: column;
   padding-bottom: 30px;
   background-color: #FAFAFA;
@@ -514,15 +544,21 @@ html {
 .card:hover .button {
   background: #f1cdb3;
 }
+@media screen and (max-width: 1090px) {
+  .card_hidden {
+    display: none;
+  }
+}
 
 .card__title {
   font-size: 20px;
 }
 
 .button {
-  padding: 15px 45px;
+  padding: 15px 40px;
   border-radius: 100px;
   border: none;
+  font-size: 17px;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -571,17 +607,29 @@ html {
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-start;
-  height: 100%;
+  flex-wrap: wrap;
+  row-gap: 65px;
+}
+@media screen and (max-width: 984px) {
+  .footer__container {
+    justify-content: center;
+    column-gap: 65px;
+  }
 }
 
 .contact-blocks {
+  padding-top: 17px;
   max-width: 302px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-start;
   flex-direction: column;
-  min-height: 234px;
+  min-height: 248px;
+}
+.contact-blocks:last-of-type {
+  position: relative;
+  right: 15px;
 }
 
 .footer__title {

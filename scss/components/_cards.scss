@@ -5,6 +5,13 @@
     @media screen and (max-width: $table) {
         justify-content: space-between;
       }
+
+    &_pets {
+        @media screen and (max-width: $table) {
+            justify-content: center;
+            gap: 30px 40px;
+          }
+    }
 }
 
 .card {
@@ -24,7 +31,7 @@
         background: $additional-color
     }
 
-    &:last-of-type {
+    &_hidden {
         @media screen and (max-width: $table) {
             display: none;
           }
