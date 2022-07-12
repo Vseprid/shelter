@@ -1,11 +1,19 @@
 .help {
     padding-bottom: 80px;
+
+    @media screen and (max-width: $mobile) {
+        padding-bottom: $gap-mobile;
+    }
 }
 
 .help__title {
     max-width: 318px;
     text-align: center;
     margin: 0 auto 60px;
+
+    @media screen and (max-width: $mobile) {
+        width: 80%;
+    }
 }
 
 .help-icons {
@@ -18,7 +26,13 @@
 
     @media screen and (max-width: 805px) {
         column-gap: 6%
-      }
+    }
+
+      @media screen and (max-width: ($mobile - 100px)) {
+        max-width: 100%;
+        row-gap: 30px;
+        justify-content: space-between;
+    }
 }
 
 .help-icon {
@@ -28,10 +42,18 @@
 
     @media screen and (max-width: 805px) {
         min-width: 170px;
-      }
+    }
+
+      @media screen and (max-width: $mobile) {
+        min-width: 130px;
+    }
 }
 
 .help__subtitle {
     @extend %font-title;
     font-size: 20px;
+
+    @media screen and (max-width: $mobile) {
+        font-size: 15px;
+    }
 }

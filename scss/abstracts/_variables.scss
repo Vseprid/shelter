@@ -1,5 +1,6 @@
 $margin-center: 0 auto;
 $title-font: 35px;
+$title-font-mobile: 25px;
 $medium-font: 17px;
 $line-height: 160%;
 $additional-color: rgba(241, 205, 179, 1);
@@ -9,6 +10,9 @@ $main-color: #4C4C4C;
 $black-color: #292929;
 $background: url(noise_lines_transparent@2X.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 $table: 1090px;
+$mobile: 500px;
+$gap-mobile: 42px;
+$transition-standart: all .4s linear;
 
 %font-title {
     font-family: 'Georgia', 'Times New Roman', Times, serif;;

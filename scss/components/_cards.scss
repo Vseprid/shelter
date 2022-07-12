@@ -2,9 +2,9 @@
     @include flex();
     width: 100%;
 
-    @media screen and (max-width: $table) {
-        justify-content: space-between;
-      }
+    @media screen and (max-width: 620px) {
+        justify-content: center;
+    }
 
     &_pets {
         @media screen and (max-width: $table) {
@@ -33,6 +33,12 @@
 
     &_hidden {
         @media screen and (max-width: $table) {
+            display: none;
+          }
+    }
+
+    &_hidden-mobile {
+        @media screen and (max-width: 620px) {
             display: none;
           }
     }

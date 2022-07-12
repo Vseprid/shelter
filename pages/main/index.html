@@ -22,6 +22,11 @@
                     <li class="nav__li"><a class="nav__a" href="#footer">Contacts</a></li>
                 </ul>
             </nav>
+            <div class="header__burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </header>
     <main>
@@ -40,8 +45,8 @@
                 <img src="/assets/images/about-pets.png" alt="happy dog and cat">
                 <div class="about__text">
                     <h2 class="title about__title">About the shelter “Cozy House”</h2>
-                    <p>Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
-                    <p>We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
+                    <p class="about__p">Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
+                    <p class="about__p">We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
                 </div>
             </div>
         </section>
@@ -49,29 +54,31 @@
             <div class="container our-friends__container">
                 <h2 class="title our-friend__title">Our friends who <br>are looking for a house</h2>
                 <div class="scroll">
-                    <div class="scroll__arrow scroll__arrow_inactive">
+                    <div id="scroll-left" class="scroll__arrow scroll__arrow_inactive">
                         <svg class="scroll__svg">
                             <use href="/assets/icons/sprite.svg#arrow-left"></use>
                         </svg>
                     </div>
-                    <div class="cards">
-                        <div class="card">
-                            <img src="/assets/images/pets-katrine.jpg" alt="cat Katrine">
-                            <h3 class="card__title">Katrine</h3>
-                            <button class="button button_light">Learn more</button>
-                        </div>
-                        <div class="card">
-                            <img src="/assets/images/pets-jennifer.jpg" alt="dog Jennifer">
-                            <h3 class="card__title">Jennifer</h3>
-                            <button class="button button_light">Learn more</button>
-                        </div>
-                        <div class="card card_hidden">
-                            <img src="/assets/images/pets-woody.jpg" alt="dog Woody">
-                            <h3 class="card__title">Woody</h3>
-                            <button class="button button_light">Learn more</button>
+                    <div class="scroll__wrapper">
+                        <div class="cards">
+                            <div class="card">
+                                <img src="/assets/images/pets-katrine.jpg" alt="cat Katrine">
+                                <h3 class="card__title">Katrine</h3>
+                                <button class="button button_light">Learn more</button>
+                            </div>
+                            <div class="card card_hidden-mobile">
+                                <img src="/assets/images/pets-jennifer.jpg" alt="dog Jennifer">
+                                <h3 class="card__title">Jennifer</h3>
+                                <button class="button button_light">Learn more</button>
+                            </div>
+                            <div class="card card_hidden">
+                                <img src="/assets/images/pets-woody.jpg" alt="dog Woody">
+                                <h3 class="card__title">Woody</h3>
+                                <button class="button button_light">Learn more</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="scroll__arrow">
+                    <div id="scroll-right" class="scroll__arrow">
                         <svg class="scroll__svg">
                             <use href="/assets/icons/sprite.svg#arrow-right"></use>
                         </svg>
@@ -125,7 +132,7 @@
         </section>
         <section class="grey-section">
             <div class="container in-addition__container">
-                <img src="/assets/images/donation-dog.png" alt="a cute little dog">
+                <img class="in-addition__image" src="/assets/images/donation-dog.png" alt="a cute little dog">
                 <div class="in-addition__text">
                     <h2 class="title">You can also<br>make a donation</h2>
                     <p class="subtitle">Name of the bank / Type of bank account</p>
@@ -160,5 +167,6 @@
             <img src="/assets/images/footer-puppy.png" alt="a happy puppy">
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

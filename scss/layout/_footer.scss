@@ -11,7 +11,12 @@
     @media screen and (max-width: 984px) {
         justify-content: center;
         column-gap:65px;
-      }
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding-top: 30px;
+        column-gap: $gap-mobile;
+    }
 }
 
 .contact-blocks {
@@ -24,6 +29,17 @@
     &:last-of-type {
         position: relative;
         right: 15px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding-top: 0px;
+        align-items: center;
+        min-height: auto;
+        gap: 40px;
+
+        &:last-of-type {
+            right: 0;
+        }
     }
 }
 

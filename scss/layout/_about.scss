@@ -7,7 +7,11 @@
     @media screen and (max-width: 900px) {
         flex-wrap: wrap-reverse;
         justify-content: center;
-      }
+    }
+
+    @media screen and (max-width: $table) {
+      row-gap: 42px;
+    }
 }
 .about__text {
     @include flex();
@@ -19,4 +23,15 @@
 
 .about__title {
     max-width: 370px;
+
+    @media screen and (max-width: $table) {
+        text-align: center;
+        max-width: 280px;
+      }
+}
+
+.about__p {
+    @media screen and (max-width: $table) {
+        text-align: justify;
+      }
 }

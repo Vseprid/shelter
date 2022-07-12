@@ -2,6 +2,10 @@
     @include flex(flex-start, center);
     flex-direction: column;
     gap: 60px;
+
+    @media screen and (max-width: $table) {
+        gap: $gap-mobile;
+      }
 }
 
 .our-friend__title {

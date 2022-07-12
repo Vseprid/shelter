@@ -22,7 +22,14 @@
 
     @media screen and (max-width: 1000px) {
         margin-top: 0px;
-      }
+    }
+
+    @media screen and (max-width: $mobile) {
+        align-items: center;
+        & > * {
+            text-align: center
+        }
+    }
 }
 
 .not-only__title {
@@ -31,6 +38,11 @@
     font-size: 44px;
     color: $light-color;
     letter-spacing: 0.01em;
+
+    @media screen and (max-width: $mobile) {
+       font-size: $title-font-mobile;
+       max-width: 70%;
+    }
 }
 
 .not-only__subtitle {

@@ -5,7 +5,34 @@
 
     @media screen and (max-width: 800px) {
         gap: 12px;
+    }
+
+    @media screen and (max-width: 705px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "container container"
+        "scrollLeft scrollRight";
+        justify-items: center;
+
+        & > #scroll-left {
+            grid-area: scrollLeft;
+            max-width: 52px;
+        }
+
+        & > #scroll-right {
+            grid-area: scrollRight;
+            max-width: 52px;
+        }
+
+        & > .scroll__wrapper {
+            grid-area: container;
+        }
       }
+}
+
+.scroll__wrapper {
+    width: 100%;
 }
 
 .scroll__arrow {

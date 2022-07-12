@@ -2,6 +2,11 @@
     @extend %font-title;
     font-size: $title-font;
     letter-spacing: 0.06em;
+
+    @media screen and (max-width: $mobile) {
+        font-size: $title-font-mobile;
+        text-align: center;
+    }
 }
 
 .subtitle {
@@ -9,4 +14,8 @@
     line-height: 110%;
     letter-spacing: 0.06em;
     font-size: 15px;
+
+    @media screen and (max-width: $mobile) {
+        letter-spacing: 0;
+    }
 }
