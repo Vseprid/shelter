@@ -7,6 +7,10 @@
         @extend %scroll-buttons;
 
     }
+
+    @media screen and (max-width: $mobile) {
+        gap: 10px;
+    }
 }
 
 .pag__number {

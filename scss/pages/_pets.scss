@@ -4,9 +4,13 @@
 
 .header {
     position: sticky;
-    top: -1px;
+    top: 0px;
     background-color: $light-color;
     z-index: 10;
+}
+
+.nav {
+    background-color: $light-color;
 }
 
 .nav__a_focus {

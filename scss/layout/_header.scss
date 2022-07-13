@@ -8,7 +8,7 @@
     @include flex(space-between, center);
 
     @media screen and (max-width: $table) {
-        margin-top: 30px;
+        margin: 30px auto;
       }
 }
 
