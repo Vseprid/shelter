@@ -9,7 +9,8 @@
         justify-content: center;
     }
 
-    @media screen and (max-width: $table) {
+    @media screen and (max-width: $mobile) {
+      width: 84%;
       row-gap: 42px;
     }
 }
@@ -19,19 +20,28 @@
     margin-top: 14px;
     gap: 25px;
     max-width: 430px;
+
+    @media screen and (max-width: $table) {
+        margin-top: 0;
+    }
 }
 
 .about__title {
     max-width: 370px;
 
     @media screen and (max-width: $table) {
-        text-align: center;
-        max-width: 280px;
+        max-width: 310px;
       }
 }
 
 .about__p {
     @media screen and (max-width: $table) {
         text-align: justify;
+      }
+}
+
+.about__image {
+    @media screen and (max-width: $mobile) {
+        width: 95%;
       }
 }

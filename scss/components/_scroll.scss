@@ -8,12 +8,15 @@
     }
 
     @media screen and (max-width: 705px) {
+        width: 90%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
         "container container"
         "scrollLeft scrollRight";
         justify-items: center;
+        row-gap: 16px;
+        column-gap: 0;
 
         & > #scroll-left {
             grid-area: scrollLeft;

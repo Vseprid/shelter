@@ -1,6 +1,10 @@
 .not-only {
     padding-bottom: 0;
     background: $background;
+
+    @media screen and (max-width: $mobile) {
+       padding-top: 80px;
+    }
 }
 
 .not-only__container {
@@ -11,7 +15,8 @@
 
     @media screen and (max-width: 1234px) {
         justify-content: center;
-      }
+        padding-top: 70px;
+    }
 }
 
 .not-only__text {
@@ -42,6 +47,7 @@
     @media screen and (max-width: $mobile) {
        font-size: $title-font-mobile;
        max-width: 70%;
+       letter-spacing: 0.05em;
     }
 }
 
@@ -63,8 +69,12 @@
       }
 
     @media screen and (max-width: 768px) {
-      width: 84%;
+      width: 80%;
       position: relative;
       left: 10%;
     }
+
+    @media screen and (max-width: $mobile) {
+        width: 90%;
+     }
 }

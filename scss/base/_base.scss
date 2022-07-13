@@ -11,7 +11,7 @@ section {
     padding-top: 80px;
     padding-bottom: 100px;
 
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 500px) {
         padding-top: $gap-mobile;
         padding-bottom: $gap-mobile;
       }
