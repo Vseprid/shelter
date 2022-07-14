@@ -1,7 +1,3 @@
-const burger = document.querySelector(".header__burger"),
-  navigation = document.querySelector(".nav");
+import { burger, switchNav } from '../../script/nav.js'
 
-burger.addEventListener("click", () => {
-  navigation.classList.toggle("active");
-  burger.classList.toggle("active");
-});
+burger.addEventListener(() => switchNav())
