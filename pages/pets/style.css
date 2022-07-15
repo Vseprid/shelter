@@ -445,7 +445,7 @@ html {
 }
 
 .logo {
-  z-index: 10;
+  z-index: 11;
 }
 
 .logo__h {
@@ -473,7 +473,7 @@ html {
   margin-right: 43px;
   display: none;
   transition: all 0.4s linear;
-  z-index: 10;
+  z-index: 11;
 }
 .header__burger.active {
   transform: rotate(90deg);
@@ -501,16 +501,17 @@ html {
 }
 @media screen and (max-width: 500px) {
   .nav {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    right: 100%;
+    right: -100%;
     top: 0;
     width: 320px;
     height: 100vh;
     background-color: #292929;
+    z-index: 10;
     transition: all 0.4s linear;
   }
   .nav > .nav__ul {

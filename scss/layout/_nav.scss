@@ -1,15 +1,16 @@
 .nav {
     @include flex(center);
     @media screen and (max-width: 500px) {
-        position: absolute;
+        position: fixed;
         @include flex(center, center);
-        right: 100%;
+        right: -100%;
         top: 0;
         width: 320px;
         height: 100vh;
         background-color: #292929;;
-        // transform: translateX(100vw);
+        z-index: 10;
         transition: $transition-standart;
+
         & > .nav__ul {
             padding-left: 0;
             flex-direction: column;
@@ -23,7 +24,6 @@
 
         &.active {
             right: 0;
-
         }
       }
 }

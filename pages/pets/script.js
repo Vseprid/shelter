@@ -1,3 +1,3 @@
-import { burger, switchNav } from '../../script/nav.js'
+import {burger, switchNav} from '../../script/nav.js'
 
-burger.addEventListener(() => switchNav())
+burger.addEventListener('click', switchNav);
