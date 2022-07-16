@@ -1,8 +1,9 @@
 .cards {
     @include flex();
+    height: 438px;
     width: 100%;
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 670px) {
         justify-content: center;
     }
 
@@ -31,17 +32,17 @@
         background: $additional-color
     }
 
-    &_hidden {
-        @media screen and (max-width: $table) {
-            display: none;
-          }
-    }
+    // &_hidden {
+    //     @media screen and (max-width: $table) {
+    //         display: none;
+    //       }
+    // }
 
-    &_hidden-mobile {
-        @media screen and (max-width: 620px) {
-            display: none;
-          }
-    }
+    // &_hidden-mobile {
+    //     @media screen and (max-width: 620px) {
+    //         display: none;
+    //       }
+    // }
 }
 
 .card__title {

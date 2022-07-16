@@ -814,6 +814,7 @@ html {
 
 .scroll__wrapper {
   width: 100%;
+  overflow: hidden;
 }
 
 .scroll__arrow {
@@ -840,9 +841,10 @@ html {
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-start;
+  height: 438px;
   width: 100%;
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 670px) {
   .cards {
     justify-content: center;
   }
@@ -871,16 +873,6 @@ html {
 }
 .card:hover .button {
   background: #f1cdb3;
-}
-@media screen and (max-width: 1090px) {
-  .card_hidden {
-    display: none;
-  }
-}
-@media screen and (max-width: 620px) {
-  .card_hidden-mobile {
-    display: none;
-  }
 }
 
 .card__title {
