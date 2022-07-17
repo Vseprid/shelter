@@ -1,14 +1,15 @@
 const url = '/script/pets.json';
-const cardsInf = {
+export const cardsInf = {
     amount: 3,
     cards: [],
+    offset: 0,
 }
 
 export async function setCards() {
-    if (!inputCards.inital) await createCards();
+    if (!setCards.inital) await createCards();
     setAmtCards();
     insertCards()
-    inputCards.inital = true;
+    setCards.inital = true;
 }
 
 async function getData(url) {
@@ -42,10 +43,22 @@ function insertCards() {
         if (index % cardsInf.amount === 0) limitCards.push(section = []);
         section.push(element);
       }
-    const cardsWrapper = document.querySelector('.cards')
-    cardsWrapper.innerHTML = ''
-    for (let card of limitCards[0]) {
-        cardsWrapper.appendChild(card)
+    cardsInf.cardsWrapper = document.querySelector('.cards')
+    cardsInf.limitCards = limitCards
+    appendCards(cardsInf.cardsWrapper)
+}
+
+export function appendCards(wrapper) {
+    wrapper.innerHTML = ''
+
+    if (cardsInf.limitCards.length <= cardsInf.offset) {
+        cardsInf.offset = 0;
+    } else if (cardsInf.offset < 0) {
+        cardsInf.offset = cardsInf.limitCards.length - 1
+    }
+
+    for (let card of cardsInf.limitCards[cardsInf.offset]) {
+        wrapper.appendChild(card)
     }
 }
 
