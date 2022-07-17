@@ -29,6 +29,8 @@ async function createCards() {
         <h3 class="card__title">${cardObj.name}</h3>
         <button class="button button_light">Learn more</button>
         `;
+        const popup = document.createElement('div');
+        popup.className = 'popup';
         return card;
     });
     shuffle(cards)
@@ -52,7 +54,6 @@ export function appendCards(wrapper, id) {
     wrapper.innerHTML = ''
 
     offsetCards(id)
-
 
     for (let card of cardsInf.limitCards[cardsInf.offset]) {
         wrapper.appendChild(card)
