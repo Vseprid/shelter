@@ -1,4 +1,6 @@
-const url = '/script/pets.json';
+import { createCards } from "./create-cards.js";
+
+
 export const cardsInf = {
     amount: 3,
     cards: [],
@@ -13,31 +15,6 @@ export async function setCards() {
     setCards.inital = true;
 }
 
-async function getData(url) {
-    const res = await fetch(url);
-    const data = await res.json();
-    return data;
-}
-
-async function createCards() {
-    const data = await getData(url);
-    const cards = data.map(cardObj => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-        <img src="${cardObj.img}" alt="${cardObj.type} ${cardObj.name}">
-        <h3 class="card__title">${cardObj.name}</h3>
-        <button class="button button_light">Learn more</button>
-        `;
-        const popup = document.createElement('div');
-        popup.className = 'popup';
-        return card;
-    });
-    shuffle(cards)
-    cardsInf.cards = cards;
-    console.log('createCards finish')
-}
-
 
 function insertCards(cards) {
     const limitCards = [];
@@ -47,7 +24,7 @@ function insertCards(cards) {
         section.push(element);
     }
     cardsInf.cardsWrapper = document.querySelector('.cards')
-    cardsInf.limitCards = limitCards
+    cardsInf.limitCards = limitCards;
 }
 
 export function appendCards(wrapper, id) {
@@ -55,8 +32,10 @@ export function appendCards(wrapper, id) {
 
     offsetCards(id)
 
+
     for (let card of cardsInf.limitCards[cardsInf.offset]) {
-        wrapper.appendChild(card)
+
+        card.forEach(el => wrapper.appendChild(el))
     }
 }
 
@@ -72,8 +51,6 @@ function offsetCards (id) {
             cardsInf.limitCards.push(cardsInf.limitCards.shift())
             cardsInf.limitCards = cardsInf.limitCards.flat();
             insertCards(cardsInf.limitCards)
-            console.log(cardsInf.offset)
-            console.log(cardsInf.limitCards);
         } else {
             cardsInf.limitCards = cardsInf.limitCards.flat().reverse()
             insertCards(cardsInf.limitCards);
@@ -94,10 +71,3 @@ function setAmtCards() {
         cardsInf.amount = 1;
     }
 }
-
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  }
