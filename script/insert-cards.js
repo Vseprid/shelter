@@ -8,7 +8,8 @@ export const cardsInf = {
 export async function setCards() {
     if (!setCards.inital) await createCards();
     setAmtCards();
-    insertCards()
+    insertCards(cardsInf.cards);
+    appendCards(cardsInf.cardsWrapper)
     setCards.inital = true;
 }
 
@@ -36,26 +37,39 @@ async function createCards() {
 }
 
 
-function insertCards() {
+function insertCards(cards) {
     const limitCards = [];
     let section;
-    for (const [index, element] of cardsInf.cards.entries()) {
+    for (const [index, element] of cards.entries()) {
         if (index % cardsInf.amount === 0) limitCards.push(section = []);
         section.push(element);
-      }
+    }
     cardsInf.cardsWrapper = document.querySelector('.cards')
     cardsInf.limitCards = limitCards
-    appendCards(cardsInf.cardsWrapper)
 }
 
-export function appendCards(wrapper) {
+export function appendCards(wrapper, id) {
     wrapper.innerHTML = ''
-
     if (cardsInf.limitCards.length <= cardsInf.offset) {
         cardsInf.offset = 0;
     } else if (cardsInf.offset < 0) {
         cardsInf.offset = cardsInf.limitCards.length - 1
     }
+    if (cardsInf.limitCards[cardsInf.offset].length < cardsInf.amount) {
+        if (id === 'scroll-right' || cardsInf.offset === 0) {
+            cardsInf.offset && cardsInf.offset--;
+            cardsInf.limitCards.push(cardsInf.limitCards.shift())
+            cardsInf.limitCards = cardsInf.limitCards.flat();
+            insertCards(cardsInf.limitCards)
+        } else {
+            cardsInf.limitCards = cardsInf.limitCards.flat().reverse()
+            insertCards(cardsInf.limitCards);
+            cardsInf.limitCards = cardsInf.limitCards.reverse()
+            console.log(cardsInf.limitCards);
+            cardsInf.limitCards.forEach(block => block.reverse())
+        }
+    }
+
 
     for (let card of cardsInf.limitCards[cardsInf.offset]) {
         wrapper.appendChild(card)

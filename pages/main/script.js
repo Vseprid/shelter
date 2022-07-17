@@ -11,6 +11,6 @@ const scrollButtons = document.querySelectorAll('.scroll__arrow');
 scrollButtons.forEach(button => {
     button.addEventListener('click', () => {
         button.id === 'scroll-right' ? cardsInf.offset++ : cardsInf.offset--;
-        appendCards(cardsInf.cardsWrapper)
+        appendCards(cardsInf.cardsWrapper, button.id)
     })
 })
