@@ -50,6 +50,16 @@ function insertCards(cards) {
 
 export function appendCards(wrapper, id) {
     wrapper.innerHTML = ''
+
+    offsetCards(id)
+
+
+    for (let card of cardsInf.limitCards[cardsInf.offset]) {
+        wrapper.appendChild(card)
+    }
+}
+
+function offsetCards (id) {
     if (cardsInf.limitCards.length <= cardsInf.offset) {
         cardsInf.offset = 0;
     } else if (cardsInf.offset < 0) {
@@ -57,22 +67,19 @@ export function appendCards(wrapper, id) {
     }
     if (cardsInf.limitCards[cardsInf.offset].length < cardsInf.amount) {
         if (id === 'scroll-right' || cardsInf.offset === 0) {
-            cardsInf.offset && cardsInf.offset--;
+            cardsInf.offset && cardsInf.offset--
             cardsInf.limitCards.push(cardsInf.limitCards.shift())
             cardsInf.limitCards = cardsInf.limitCards.flat();
             insertCards(cardsInf.limitCards)
+            console.log(cardsInf.offset)
+            console.log(cardsInf.limitCards);
         } else {
             cardsInf.limitCards = cardsInf.limitCards.flat().reverse()
             insertCards(cardsInf.limitCards);
             cardsInf.limitCards = cardsInf.limitCards.reverse()
-            console.log(cardsInf.limitCards);
+
             cardsInf.limitCards.forEach(block => block.reverse())
         }
-    }
-
-
-    for (let card of cardsInf.limitCards[cardsInf.offset]) {
-        wrapper.appendChild(card)
     }
 }
 
@@ -82,7 +89,6 @@ function setAmtCards() {
         cardsInf.amount = 3
     } else if (widthBrowser <= 1090 && widthBrowser > 670) {
         cardsInf.amount = 2;
-        console.log(2)
     } else {
         cardsInf.amount = 1;
     }
