@@ -1162,29 +1162,101 @@ html {
   flex-direction: row;
   align-items: flex-start;
 }
+@media screen and (max-width: 1090px) {
+  .popup {
+    height: 350px;
+    top: calc(50% - 175px);
+    left: calc(50% - 315px);
+    gap: 11px;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .popup {
+    height: 350px;
+    top: calc(50% - 175px);
+    left: calc(50% - 315px);
+    gap: 11px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup {
+    height: 390px;
+    top: calc(50% - 195px);
+    left: calc(50% - 120px);
+  }
+}
 
 .popup__img {
+  height: 100%;
+  border-radius: inheritz;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .popup__img {
+    display: none;
+  }
+}
+.popup__img > img {
   height: 100%;
 }
 
 .popup__text {
-  max-width: 351px;
+  width: 351px;
   margin-top: 50px;
   margin-right: 20px;
   line-height: 110%;
 }
+@media screen and (max-width: 1090px) {
+  .popup__text {
+    max-width: 260px;
+    margin-top: 10px;
+    margin-right: 9px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup__text {
+    max-width: 220px;
+    margin: 10px;
+  }
+}
 
 .popup__title {
   margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .popup__title {
+    font-size: 35px;
+  }
 }
 
 .popup__subtitle {
   margin-bottom: 40px;
   font-size: 20px;
 }
+@media screen and (max-width: 1090px) {
+  .popup__subtitle {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup__subtitle {
+    text-align: center;
+  }
+}
 
 .popup__par {
   margin-bottom: 40px;
+}
+@media screen and (max-width: 1090px) {
+  .popup__par {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup__par {
+    text-align: justify;
+  }
 }
 
 .popup__list {
@@ -1194,6 +1266,11 @@ html {
   margin-bottom: 11px;
   color: #f1cdb3;
 }
+@media screen and (max-width: 1090px) {
+  .popup__list > li {
+    margin-bottom: 6px;
+  }
+}
 .popup__list > li > span {
   color: black;
 }
@@ -1201,7 +1278,7 @@ html {
 .popup__close {
   position: absolute;
   top: -50px;
-  right: -42px;
+  right: -37px;
   width: 52px;
   height: 52px;
   display: flex;

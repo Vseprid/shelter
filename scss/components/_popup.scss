@@ -14,33 +14,93 @@
     &.active {
         @include flex();
     }
+
+    @media screen and (max-width: $table) {
+        height: 350px;
+        top: calc(50% - 175px);
+        left: calc(50% - 315px);
+        gap: 11px;
+    }
+
+    @media screen and (max-width: $table) {
+        height: 350px;
+        top: calc(50% - 175px);
+        left: calc(50% - 315px);
+        gap: 11px;
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 390px;
+        top: calc(50% - 195px);
+        left: calc(50% - 120px);
+    }
 }
 
 .popup__img {
     height: 100%;
+    border-radius: inheritz;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+    & > img {
+        height: 100%;
+    }
 }
 
 .popup__text {
-    max-width: 351px;
+    width: 351px;
     margin-top: 50px;
     margin-right: 20px;
     @extend %font-title;
     line-height: 110%;
+
+    @media screen and (max-width: $table) {
+        max-width: 260px;
+        margin-top: 10px;
+        margin-right: 9px;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 220px;
+        margin: 10px;
+    }
 }
 
 .popup__title {
     margin-bottom: 10px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 35px;
+    }
 }
 
 .popup__subtitle {
     margin-bottom: 40px;
     font-size: 20px;
+
+    @media screen and (max-width: $table) {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
 }
 
 .popup__par {
     margin-bottom: 40px;
 
+    @media screen and (max-width: $table) {
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
 
+    @media screen and (max-width: 768px) {
+        text-align: justify;
+    }
 }
 
 .popup__list {
@@ -48,6 +108,10 @@
     & > li {
         margin-bottom: 11px;
         color: $additional-color;
+
+        @media screen and (max-width: $table) {
+            margin-bottom: 6px;
+        }
 
         & > span {
             color: rgba(0, 0, 0, 1);
@@ -58,7 +122,7 @@
 .popup__close {
     position: absolute;
     top: -50px;
-    right: -42px;
+    right: -37px;
     width: 52px;
     height: 52px;
     @include flex(center, center);

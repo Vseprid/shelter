@@ -22,7 +22,9 @@ export async function createCards() {
         const popup = document.createElement('div');
         popup.className = 'popup';
         popup.innerHTML = `
-        <img class="popup__img" src="${cardObj.img}" alt="${cardObj.type} ${cardObj.name}">
+        <div class="popup__img">
+            <img src="${cardObj.img}" alt="${cardObj.type} ${cardObj.name}">
+        </div>
         <div class="popup__text">
             <h3 class="title popup__title">${cardObj.name}</h3>
             <h4 class="subtitle popup__subtitle">${cardObj.type} - ${cardObj.breed}</h4>
